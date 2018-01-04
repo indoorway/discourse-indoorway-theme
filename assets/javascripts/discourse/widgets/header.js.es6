@@ -193,8 +193,6 @@ createWidget('header-sub', {
   tagName: 'div#sub-header',
 
   html(attrs) {  
-    
-    console.log('Header-sub state', attrs)
 
     const home = this.attach('link', {
       className: 'icon',
@@ -244,7 +242,6 @@ export default createWidget('header', {
   },
 
   html(attrs, state) {
-    console.log('Header state', state)
     const panels = [
                     this.attach('header-links'),                    
                     this.attach('header-sub', {attrs: attrs, state: state})
