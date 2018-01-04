@@ -1,0 +1,97 @@
+{{plugin-outlet name="above-site-header"}}
+{{site-header canSignUp=canSignUp
+              showCreateAccount=(action "appRouteAction" "showCreateAccount")
+              showLogin=(action "appRouteAction" "showLogin")
+              showKeyboard=(action "appRouteAction" "showKeyboardShortcutsHelp")
+              toggleMobileView=(action "appRouteAction" "toggleMobileView")
+              toggleAnonymous=(action "appRouteAction" "toggleAnonymous")
+              logout=(action "appRouteAction" "logout")}}
+{{plugin-outlet name="below-site-header"}}
+
+<div id="main-outlet" class="wrap">
+  <div class="container">
+    {{#if showTop}}
+      {{custom-html name="top"}}
+    {{/if}}
+    {{global-notice}}
+    {{create-topics-notice}}
+  </div>
+  {{outlet}}
+  {{outlet "user-card"}}
+</div>
+
+{{plugin-outlet name="above-footer" args=(hash showFooter=showFooter)}}
+<footer id="main-footer">  
+  <div class="site-info">
+    <div class="container">
+      <div class="footer-group about-container">
+        <div class="header">
+          <img src="https://www.indoorway.com/brand/indoorway-logo/svg/indoorway_logo_inverse.svg" class="logo" alt="Logo inverse">
+        </div>
+        <div class="about-info">Indoorway is the most comprehensive smart indoor platform for creating location-based experiences. We implement proximity
+          solutions for venues of all sizes, all around the world.</div>
+      </div>
+      <p class="br"></p>
+      <div class="footer-group">
+        <a href="http://www.indoorway.com/business/" class="header">Business</a>
+        <a href="http://www.indoorway.com/business/industry4.0/">Industrial</a>
+        <a href="http://www.indoorway.com/business/#business-retail">Retail</a>
+        <a href="http://www.indoorway.com/business/#business-offices">Offices</a>
+        <a href="http://www.indoorway.com/business/#business-transit">Transit</a>
+        <a href="http://www.indoorway.com/business/#business-venues">Venues</a>
+        <a href="http://www.indoorway.com/business/#business-analysis">Data Analysis</a>
+      </div>
+      <div class="footer-group">
+        <a href="http://www.indoorway.com/developers/" class="header">Developer</a>
+        <a href="http://www.indoorway.com/developers/#sdk-features">SDK features</a>
+        <a href="http://www.indoorway.com/developers/#code-implementation">Download SDK</a>
+        <a href="https://help.indoorway.com">Developer Guide</a>
+        <a href="http://www.indoorway.com/community/">Community</a>
+      </div>
+      <p class="br"></p>
+      <div class="footer-group">
+        <a href="http://www.indoorway.com/technology/" class="header">Technology</a>
+        <a href="http://www.indoorway.com/technology/">Location accuracy</a>
+        <a href="http://www.indoorway.com/technology/#api-ecosystem">API ecosystem</a>
+        <a href="http://www.indoorway.com/tools/">Our Tools</a>
+      </div>
+      <p class="br"></p>
+      <div class="footer-group">
+        <a href="http://www.indoorway.com/pricing/" class="header">Pricing</a>
+        <a href="http://www.indoorway.com/pricing/#pricing">Start using for free</a>
+        <a href="http://www.indoorway.com/pricing/#tools">Tools included</a>
+        <a href="http://www.indoorway.com/pricing/#qa">Q&amp;A</a>
+      </div>
+      <p class="br"></p>
+      <div class="footer-group">
+        <a href="http://www.indoorway.com/about/" class="header">About</a>
+        <a href="http://www.indoorway.com/about/#office-location">Office Location</a>
+        <a href="http://www.indoorway.com/privacy-policy/">Privacy Policy</a>
+        <a href="http://www.indoorway.com/terms-of-service/">Terms of Service</a>
+        <a href="http://www.indoorway.com/careers/">Careers</a>
+      </div>
+      <p class="br"></p>
+      <div class="footer-group">
+        <a href="http://www.indoorway.com/about/#contact-us" class="header">Contact us</a>
+        <div class="contact-text">Want to talk to us?</div>
+        <a href="mailto:contact@indoorway.com" class="mail-to">contact@indoorway.com</a>
+        <a href="http://www.indoorway.com/press">Press</a>
+      </div>
+      <div class="copyright-social">
+        <div class="copy">© Copyright 2017</div>
+        <div class="socials">
+          <span class="font-semibold">Follow us</span>
+          <a href="https://www.facebook.com/indoorway" class="fa fa-facebook" target="_blank"></a>
+          <a href="https://twitter.com/indoorway" class="fa fa-twitter" target="_blank"></a>
+          <a href="https://www.linkedin.com/company/indoorway" class="fa fa-linkedin" target="_blank"></a>
+          <a href="https://github.com/indoorway" class="fa fa-github" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{{plugin-outlet name="below-footer" args=(hash showFooter=showFooter)}}
+
+{{outlet "modal"}}
+{{topic-entrance}}
+{{outlet "composer"}}

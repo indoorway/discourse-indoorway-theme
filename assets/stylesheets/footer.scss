@@ -1,0 +1,202 @@
+footer#main-footer {
+  margin-top: auto;
+  padding-top: 30px;
+  .container {
+    margin: 0 auto;
+    &:before {
+      display: none;
+    }
+  }
+  h3 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: initial;
+  }
+  a {
+    &:hover, &:focus {
+      color: #22d56c !important;
+    }
+  }
+  .contact-header {
+    background: #31343c;
+    color: white;
+    font-size: 30px;
+    padding: 25px 0;
+    text-align: center;
+  }
+  .site-info {
+    background: #363942;
+    color: #777c8c;
+    padding: 65px 0 40px;
+    > .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    .logo {
+      width: 126px;
+      position: relative;
+      top: -11px;
+      left: -11px;
+    }
+    .footer-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      .contact-text {
+        line-height: 26px;
+      }
+      a {
+        line-height: 26px;
+        display: block;
+        &:not(.mail-to) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #777c8c;
+        }
+      }
+      .header {
+        width: 100%;
+        height: 45px;
+        color: #00aeef;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    p.br {
+      display: none;
+    }
+    .copyright-social {
+      width: 100%;
+      margin-top: 35px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      .copy {
+        margin-right: 80px;
+      }
+      a {
+        margin-left: 25px;
+      }
+    }
+  }
+  .socials a:before {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1367px) {
+  footer#main-footer .site-info .copyright-social .copy {
+    margin-right: 73px;
+  }
+}
+
+@media (min-width: 1280px) {
+  footer#main-footer .site-info {
+    .about-links .header {
+      color: transparent;
+    }
+    .about-info {
+      width: 150px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  footer#main-footer {
+    .contact-header {
+      font-size: 25px;
+      padding: 35px 0;
+    }
+    .site-info {
+      padding-top: 35px;
+      .about-info {
+        text-align: center;
+      }
+      .footer-group {
+        width: 130px;
+      }
+      .logo {
+        width: 174px;
+        left: 0;
+      }
+      .copyright-social .copy {
+        margin-right: 50px;
+      }
+      .footer-group.about-container {
+        width: 100%;
+        margin-bottom: 30px;
+        .header {
+          text-align: center;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 479px) and (max-width: 830px) {
+  footer#main-footer .site-info .container {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 989px) {
+  footer#main-footer .site-info p.br:nth-of-type(1) {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (min-width: 479px) and (max-width: 990px) {
+  footer#main-footer .site-info p.br:nth-of-type(3n) {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 479px) {
+  footer#main-footer .site-info {
+    .container {
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      font-size: 12px;
+    }
+    .about-info {
+      font-size: 14px;
+    }
+    p.br:nth-of-type(2n) {
+      width: 100%;
+      display: block;
+    }
+    .copyright-social {
+      text-align: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      .socials {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+        margin-bottom: 35px;
+      }
+      .copy {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}
