@@ -109,7 +109,7 @@ createWidget('header-icons', {
 
     const hamburger = this.attach('header-dropdown', {
                         title: 'hamburger_menu',
-                        icon: 'bars',
+                        icon: 'indoor-menu',
                         iconId: 'toggle-hamburger-menu',
                         active: attrs.hamburgerVisible,
                         action: 'toggleHamburger',
@@ -195,6 +195,12 @@ createWidget('header-sub', {
 
   html(attrs, state) {    
 
+    const home = this.attach('link', {
+      className: 'icon',
+      icon: 'indoor-home',
+      href: '/'
+    });
+
     const content = [
       this.attach('header-buttons', attrs),
       this.attach('header-icons', { hamburgerVisible: state.hamburgerVisible,
@@ -204,7 +210,7 @@ createWidget('header-sub', {
         flagCount: attrs.flagCount })
     ]
 
-    return  h('div.wrap',  h('div.container',  h('div.panel.clearfix', content)));
+    return  h('div.wrap',  h('div.container', [home,  h('div.panel.clearfix', content)]));
   }
 });
 

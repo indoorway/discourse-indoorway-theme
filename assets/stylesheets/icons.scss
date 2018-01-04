@@ -1,0 +1,17 @@
+.fa {
+  &.fa-indoor-menu {
+    background-image: url(/plugins/indoorway-theme/images/indoor-i-menu.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &.fa-indoor-home {
+    background-image: url(/plugins/indoorway-theme/images/indoor-i-home.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    font-size: 1.714em;
+    line-height: 32px;
+    display: inline-block;
+  }
+}
