@@ -106,7 +106,6 @@ createWidget('header-icons', {
 
   html(attrs) {
     if (this.siteSettings.login_required && !this.currentUser) { return []; }
-
     const hamburger = this.attach('header-dropdown', {
                         title: 'hamburger_menu',
                         icon: 'indoor-menu',
@@ -193,7 +192,9 @@ createWidget('header-links', {
 createWidget('header-sub', {
   tagName: 'div#sub-header',
 
-  html(attrs, state) {    
+  html(attrs) {  
+    
+    console.log('Header-sub state', attrs)
 
     const home = this.attach('link', {
       className: 'icon',
@@ -202,12 +203,14 @@ createWidget('header-sub', {
     });
 
     const content = [
-      this.attach('header-buttons', attrs),
-      this.attach('header-icons', { hamburgerVisible: state.hamburgerVisible,
-        userVisible: state.userVisible,
-        searchVisible: state.searchVisible,
-        ringBackdrop: state.ringBackdrop,
-        flagCount: attrs.flagCount })
+      this.attach('header-buttons', attrs.attrs),
+      this.attach('header-icons', { 
+        hamburgerVisible: attrs.state.hamburgerVisible,
+        userVisible: attrs.state.userVisible,
+        searchVisible: attrs.state.searchVisible,
+        ringBackdrop: attrs.state.ringBackdrop,
+        flagCount: attrs.attrs.flagCount 
+      })
     ]
 
     return  h('div.wrap',  h('div.container', [home,  h('div.panel.clearfix', content)]));
@@ -241,9 +244,10 @@ export default createWidget('header', {
   },
 
   html(attrs, state) {
+    console.log('Header state', state)
     const panels = [
                     this.attach('header-links'),                    
-                    this.attach('header-sub', attrs, state)
+                    this.attach('header-sub', {attrs: attrs, state: state})
                     ];
 
     if (state.searchVisible) {
