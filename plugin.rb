@@ -10,7 +10,6 @@ register_asset 'stylesheets/desktop/icons.scss', :desktop
 register_asset 'stylesheets/desktop/buttons.scss', :desktop
 register_asset 'stylesheets/desktop/category-view-topics-list.scss', :desktop
 register_asset 'stylesheets/desktop/content.scss', :desktop
-register_asset 'stylesheets/desktop/footer.scss', :desktop
 register_asset 'stylesheets/desktop/index-layout.scss', :desktop
 register_asset 'stylesheets/desktop/list-controls.scss', :desktop
 register_asset 'stylesheets/desktop/main-navigation-categories.scss', :desktop
@@ -21,3 +20,5 @@ register_asset 'stylesheets/desktop/page-header.scss', :desktop
 register_asset 'stylesheets/desktop/search.scss', :desktop
 register_asset 'stylesheets/desktop/topic-timeline.scss', :desktop
 register_asset 'stylesheets/desktop/user.scss', :desktop
+
+register_asset 'stylesheets/footer.scss', :all
