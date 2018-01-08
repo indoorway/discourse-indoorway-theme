@@ -1,0 +1,25 @@
+#sub-header {
+  [class^="fa fa-"] {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: initial;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .fa {  
+    &.fa-indoor-menu {
+      background-image: url(/plugins/indoorway-theme/images/indoor-i-menu.svg);
+    }
+    &.fa-indoor-home {
+      background-image: url(/plugins/indoorway-theme/images/indoor-i-home.svg);      
+    }
+    &.fa-search {
+      background-image: url(/plugins/indoorway-theme/images/indoor-i-search.svg);      
+      &:before {
+        content: '';
+      }
+    }
+  }
+}

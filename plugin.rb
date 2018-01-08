@@ -1,9 +1,23 @@
 # name: indoorway-theme
 # about: Adds functionalities to indoorway theme
-# version: 0.0.2
-# authors: www.indoorway.com
+# version: 0.1.0
+# authors: Daniel Sitarz www.indoorway.com
 
-register_asset 'stylesheets/icons.scss'
-register_asset 'stylesheets/footer.scss'
-register_asset 'stylesheets/style.scss'
-# register_asset 'stylesheets/category-view-topics-list.scss'
+register_asset 'stylesheets/desktop/webfonts.scss', :desktop
+register_asset 'stylesheets/desktop/layout.scss', :desktop
+register_asset 'stylesheets/desktop/style.scss', :desktop
+register_asset 'stylesheets/desktop/icons.scss', :desktop
+register_asset 'stylesheets/desktop/buttons.scss', :desktop
+register_asset 'stylesheets/desktop/category-view-topics-list.scss', :desktop
+register_asset 'stylesheets/desktop/content.scss', :desktop
+register_asset 'stylesheets/desktop/footer.scss', :desktop
+register_asset 'stylesheets/desktop/index-layout.scss', :desktop
+register_asset 'stylesheets/desktop/list-controls.scss', :desktop
+register_asset 'stylesheets/desktop/main-navigation-categories.scss', :desktop
+register_asset 'stylesheets/desktop/misc.scss', :desktop
+register_asset 'stylesheets/desktop/modals.scss', :desktop
+register_asset 'stylesheets/desktop/new-topic-button-for-quests.scss', :desktop
+register_asset 'stylesheets/desktop/page-header.scss', :desktop
+register_asset 'stylesheets/desktop/search.scss', :desktop
+register_asset 'stylesheets/desktop/topic-timeline.scss', :desktop
+register_asset 'stylesheets/desktop/user.scss', :desktop

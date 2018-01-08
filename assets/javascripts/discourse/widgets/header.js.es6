@@ -274,8 +274,10 @@ export default createWidget('header', {
       }
     });
 
+    const loggedClass = this.currentUser ? '.logged' : '';
+
     const contents = [ this.attach('home-logo', { minimized: !!attrs.topic }),
-                       h('div.panel.clearfix', panels) ];
+                       h(`div.panel.clearfix${loggedClass}`, panels) ];
 
     if (attrs.topic) {
       contents.push(this.attach('header-topic-info', attrs));

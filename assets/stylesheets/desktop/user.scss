@@ -1,0 +1,37 @@
+.user-navigation, .user-preferences {
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+.user-main {
+  background: white;
+  padding: 30px 20px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  
+  .about.collapsed-info .details {
+      border-bottom: 0;
+  }
+  .user-stream .avatar-link {
+      margin-right: 17px;
+      margin-bottom: 20px;
+  }
+  
+  .user-stream .title {
+      margin-bottom: 3px;
+  }
+  
+  .user-stream .item {
+      &:last-of-type {
+          border-bottom: none;
+      }
+  }
+  
+  .about .secondary {
+      margin-bottom: 10px;
+  }
+  .user-content .user-invite-controls {
+      height: 43px;
+      padding: 5px 10px 5px 0;
+  }
+}

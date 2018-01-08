@@ -1,0 +1,15 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.badge-notification {
+  padding: 3px 5px 3px 5px;
+}
+
+.drop-down-visible .d-header .icons .active .icon a {
+  right: 24px;
+}
+
+.drop-down-visible .d-header .icons .active .badge-notification {
+  margin-top: 5px;
+}

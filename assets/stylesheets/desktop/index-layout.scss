@@ -1,0 +1,19 @@
+.categories-and-latest {
+  .topic-list-latest {
+      width: 31%;
+  }
+  
+  .category-list {
+      width: 65%;
+      td:first-child {
+          border-left: 4px solid;
+      }
+  }
+  .subcategory {
+      // display: block;
+      margin-right: 10px;
+  }
+  .badge-category {
+      font-size: 14px;
+  }
+}

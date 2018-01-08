@@ -1,0 +1,16 @@
+html {
+  background-color: #f4f4f4;
+}
+
+.wrap {
+  max-width: 1066px;
+}
+
+@media (min-width: 1280px) {
+  .container {
+      width: 1066px;
+      &.posts {
+          width: 100%;
+      }
+  }
+}

@@ -1,0 +1,43 @@
+.navigation-categories {
+  .list-container {
+      .row {
+          &:first-of-type:not(:last-of-type) {
+              margin-bottom: 0; // overwrite from global
+          }
+      }
+  }
+  table.category-list {
+      &.with-topics {
+          thead {
+              display: none;
+          }
+      }
+      tbody {
+          .topics {
+              display: none;
+          }
+          tr:first-of-type {
+              border-top: none;
+              .category {
+                  border-top-left-radius: 8px;
+              }
+          }
+          .latest {
+              padding-left: 100px;
+          }
+          td {
+              vertical-align: middle;
+          }
+      }
+      .featured-topic {
+          .last-user-info {
+            display: block;
+            float: left;
+            margin-right: 22px;
+          }
+          &:first-of-type {
+              margin-top: 13px;
+          }
+      }
+  }
+}
