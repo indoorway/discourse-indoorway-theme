@@ -195,7 +195,7 @@ createWidget('header-sub', {
   html(attrs) {  
 
     const home = this.attach('link', {
-      className: 'icon',
+      className: 'icon back-home',
       icon: 'indoor-home',
       href: '/'
     });

@@ -1,12 +1,14 @@
 # name: indoorway-theme
 # about: Adds functionalities to indoorway theme
 # version: 0.1.0
-# authors: Daniel Sitarz www.indoorway.com
+# authors: Daniel Sitarz
+# page: www.community.indoorway.com
+
+register_asset 'stylesheets/mobile/header.scss', :mobile
 
 register_asset 'stylesheets/desktop/webfonts.scss', :desktop
 register_asset 'stylesheets/desktop/layout.scss', :desktop
 register_asset 'stylesheets/desktop/style.scss', :desktop
-register_asset 'stylesheets/desktop/icons.scss', :desktop
 register_asset 'stylesheets/desktop/buttons.scss', :desktop
 register_asset 'stylesheets/desktop/category-view-topics-list.scss', :desktop
 register_asset 'stylesheets/desktop/content.scss', :desktop
@@ -21,4 +23,5 @@ register_asset 'stylesheets/desktop/search.scss', :desktop
 register_asset 'stylesheets/desktop/topic-timeline.scss', :desktop
 register_asset 'stylesheets/desktop/user.scss', :desktop
 
+register_asset 'stylesheets/icons.scss', :all
 register_asset 'stylesheets/footer.scss', :all
