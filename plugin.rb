@@ -22,6 +22,7 @@ register_asset 'stylesheets/desktop/page-header.scss', :desktop
 register_asset 'stylesheets/desktop/search.scss', :desktop
 register_asset 'stylesheets/desktop/topic-timeline.scss', :desktop
 register_asset 'stylesheets/desktop/user.scss', :desktop
+register_asset 'stylesheets/desktop/admin-interface.scss', :desktop
 
 register_asset 'stylesheets/icons.scss', :all
 register_asset 'stylesheets/footer.scss', :all
