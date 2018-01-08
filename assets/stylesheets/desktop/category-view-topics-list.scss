@@ -173,7 +173,12 @@ table, table.category-list, table.category-list.with-topics {
 
 .topic-statuses {
     .fa-thumb-tack:before {
-        font-size: 14px;
+        font-size: 14px;        
+    }
+}
+.title-wrapper {
+    .fa-thumb-tack:before {
+        font-size: 34px;
     }
 }
 
