@@ -13,3 +13,11 @@ body {
 .drop-down-visible .d-header .icons .active .badge-notification {
   margin-top: 5px;
 }
+
+// A lot small hovers;
+.dropdown-menu li>a:hover,
+.dropdown-menu .active>a,
+.dropdown-menu .active>a:hover,
+.search-menu li:not(.category):not(.heading):hover a:not(.badge-notification) {
+  background-color: rgba(30, 175, 236, 0.125)
+}

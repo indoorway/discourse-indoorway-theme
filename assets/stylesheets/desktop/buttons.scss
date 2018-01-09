@@ -1,6 +1,7 @@
 @import 'theme_variables';
 
 .btn {
+  border-radius: 4px;
   color: #8e8e8e;
   i.fa {
     opacity: 1;
@@ -65,7 +66,8 @@ ul.nav-pills > li,
 ul.nav-pills > li > a,
 .btn,
 .d-header .btn-primary {
-  padding: 10px 20px;
+  padding: 12px 20px;
+  max-height: 42px;
   font-weight: 400;
 }
 
