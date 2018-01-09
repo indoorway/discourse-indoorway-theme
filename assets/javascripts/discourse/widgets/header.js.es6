@@ -325,6 +325,15 @@ export default createWidget('header', {
         const $searchInput = $('#search-term');
         $searchInput.focus().select();
 
+        const parentElement = document.querySelector('.search-menu');
+        const resultsLoadedClass = 'results-loaded';
+
+        if(parentElement) {
+          if(document.querySelector('.search-menu .results')) {
+            parentElement.classList.add(resultsLoadedClass);
+          }    
+        }
+
         applySearchAutocomplete($searchInput, this.siteSettings, this.appEvents, {
           appendSelector: '.menu-panel'
         });

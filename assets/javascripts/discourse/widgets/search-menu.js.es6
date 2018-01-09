@@ -121,15 +121,17 @@ export default createWidget('search-menu', {
     const parentElement = document.querySelector('.search-menu');
     const resultsLoadedClass = 'results-loaded';
 
-    if(parentElement){
+    if(parentElement) {
       parentElement.classList.remove(resultsLoadedClass);
-    }    
+    }
 
     if (searchData.term) {
       if (searchData.loading) {                        
         results.push(h('div.searching', h('div.spinner')));
-      } else {             
-        parentElement.classList.add(resultsLoadedClass);
+      } else {           
+        if(parentElement) {
+          parentElement.classList.add(resultsLoadedClass);
+        }
         results.push(this.attach('search-menu-results', { term: searchData.term,
                                                           noResults: searchData.noResults,
                                                           results: searchData.results,
