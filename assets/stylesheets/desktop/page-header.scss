@@ -82,6 +82,14 @@ header [data-click-outside] {
   position: relative;
   top: 140px;
   right: 9px;
+  &.hamburger-panel {
+    .menu-panel {
+      padding-top: 0;
+    }
+    i.fa:before {
+      font-size: 13px;
+    }
+  }
   .menu-panel {
       border-top: none;
       box-shadow: 0 17px 20px 1px rgba(0, 0, 0, 0.1);
@@ -108,6 +116,7 @@ header [data-click-outside] {
               float: none;
               display: inline-block;
               width: auto;
+              margin-top: 15px;
               a {
                   padding: 0;
                   margin-right: 30px
@@ -119,7 +128,7 @@ header [data-click-outside] {
               }
           }
           &:last-of-type {
-              margin: 10px 0;
+              margin: 0 0 13px 0;
           }
       }
       .category-links {
