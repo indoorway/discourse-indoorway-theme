@@ -85,6 +85,9 @@ header [data-click-outside] {
   &.hamburger-panel {
     .menu-panel {
       padding-top: 0;
+      hr {
+        margin: 3px 0 0 0;
+      }
     }
     i.fa:before {
       font-size: 13px;

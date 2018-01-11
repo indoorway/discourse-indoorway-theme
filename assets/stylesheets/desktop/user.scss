@@ -39,3 +39,12 @@
     box-shadow: none;
   }
 }
+
+.user-nav {
+  .fa {
+    margin-right: 6px;
+    &:before {
+      font-size: 17px;
+    }    
+  }
+}
