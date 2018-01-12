@@ -148,6 +148,16 @@ table.topic-list {
     }
 }
 
+body:not(.categories-list) {
+    .list-container {
+        .row {
+            &:first-of-type:not(:last-of-type) {
+                margin-bottom: 0
+            }
+        }
+    }
+}
+
 .list-container {
     .row {
         &:first-of-type:not(:last-of-type) {
