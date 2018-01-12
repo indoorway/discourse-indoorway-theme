@@ -7,8 +7,14 @@
 .user-main {
   background: white;
   padding: 30px 20px;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 20px rgba(223, 15, 15, 0.904);
   border-radius: 4px;
+
+  .controls {
+    .fa:before {
+      font-size: 15px;
+    }
+  }
 
   .about.collapsed-info .details {
     border-bottom: 0;
@@ -32,6 +38,10 @@
       color: #949494;
       font-size: 13px;
     }
+  }
+
+  .nav-stacked li>a {
+    padding: 10px 13px;
   }
 
   .about .secondary {

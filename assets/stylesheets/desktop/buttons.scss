@@ -72,6 +72,9 @@ ul.nav-pills > li > a,
 
 .user-archive .btn {
   max-height: initial;
+  .fa:before {
+    font-size: 13px;
+  }
 }
 
 ul.nav-pills > li > a {

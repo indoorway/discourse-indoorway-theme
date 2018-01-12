@@ -10,10 +10,19 @@
 </section>
 
 <div class='category-navigation'>
-  {{bread-crumbs categories=categories
+  <p>
+    {{#link-to category.parentCategory.nameKey }}
+      {{category.parentCategory.name}}
+    {{/link-to}}
+    ->
+    {{#link-to category.nameKey}}
+      {{category.name}}
+    {{/link-to}}
+  </p>  
+  {{!-- {{bread-crumbs categories=categories
                  category=category
                  noSubcategories=noSubcategories
-                 hideSubcategories=showingSubcategoryList}}
+                 hideSubcategories=showingSubcategoryList}} --}}
 
   {{navigation-bar navItems=navItems filterMode=filterMode category=category}}
 
