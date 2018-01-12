@@ -10,15 +10,17 @@
 </section>
 
 <div class='category-navigation'>
-  <p>
-    {{#link-to category.parentCategory.nameKey }}
-      {{category.parentCategory.name}}
-    {{/link-to}}
-    ->
-    {{#link-to category.nameKey}}
-      {{category.name}}
-    {{/link-to}}
-  </p>  
+  <div class="category-breadcrumbs">    
+    {{#if category.parentCategory}}
+    <a href={{category.parentCategory.url}}>
+      <h3>{{category.parentCategory.name}}</h3>
+    </a>
+    /
+    {{/if}}
+    <a href={{category.url}}>
+      <h3>{{category.name}}</h3>
+    </a>
+  </div>  
   {{!-- {{bread-crumbs categories=categories
                  category=category
                  noSubcategories=noSubcategories
