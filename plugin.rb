@@ -1,6 +1,6 @@
 # name: indoorway-theme
 # about: Adds functionalities to indoorway theme
-# version: 0.1.0
+# version: 0.1.2
 # authors: Daniel Sitarz
 # page: www.community.indoorway.com
 
