@@ -5,7 +5,15 @@
 }
 
 #main-outlet {
-  padding-top: 185px;
+    padding-top: 210px;
+}
+
+// Only for index
+body.navigation-categories #main-outlet,
+body.navigation-topics #main-outlet {    
+    background-image: url('/plugins/indoorway-theme/images/indoor-connected-dots-bg.svg');
+    background-repeat: no-repeat;
+    background-position: -145px -3px;
 }
 
 #sub-header {

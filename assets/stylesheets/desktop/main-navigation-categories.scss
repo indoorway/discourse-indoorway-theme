@@ -50,4 +50,7 @@
         display: inline-block;
         margin: 0;
     }
+    a:hover {
+      color: darken($tertiary, 10);
+    }
 }
