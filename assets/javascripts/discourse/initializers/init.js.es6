@@ -12,15 +12,13 @@ export default {
 };
 
 function cleanDOM() {
-  $('#transitionResizer').remove();
+  $('#main-outlet').css('min-height', 'unset');
 }
 
-function addResizer () {  
-  
+function addResizer () {
+
   let elToResize = $('#main-outlet');  
+  let height = elToResize.height() - 28; //  minus loader's height
 
-  let height = elToResize.height() - 38 - 90; // minus loader's height and some magic numbers.
-  let resizer = $('<div id="transitionResizer" />').height(height);
-
-  elToResize.append(resizer);
+  elToResize.css('min-height', height);
 }
