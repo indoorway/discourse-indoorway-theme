@@ -1,4 +1,4 @@
-import DiscourseURL from 'discourse/lib/url';
+import { scrollTop } from 'discourse/mixins/scroll-top';
 
 export default {
   name: 'init',
@@ -7,18 +7,31 @@ export default {
     const router = container.lookup('router:main');
 
     router.on('willTransition', addResizer);
-    router.on('didTransition', cleanDOM);    
+    router.on('didTransition', cleanDOM);  
+    
+    const appEvents = container.lookup('app-events:main');
+    appEvents.on('post:highlight', _ => {
+      Ember.run.scheduleOnce('afterRender', null, _ => {
+        $('.transition-resizer').remove();        
+      });
+    });
   }
 };
 
 function cleanDOM() {
-  $('#main-outlet').css('min-height', 'unset');
+  Ember.run.scheduleOnce('afterRender', null, _ => {
+    if (!$('#whole-discussion')[0]) {
+      // Post is loading longer, we will remove resizer after post:highlight
+      $('.transition-resizer').remove();
+    }    
+  });
 }
 
 function addResizer () {
-
   let elToResize = $('#main-outlet');  
   let height = elToResize.height() - 28; //  minus loader's height
 
-  elToResize.css('min-height', height);
+  scrollTop();
+
+  $('head').append(`<style class="transition-resizer">#main-outlet{min-height: ${height}px;}</style>`);
 }
