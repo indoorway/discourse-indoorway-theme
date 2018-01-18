@@ -1,7 +1,7 @@
 footer#main-footer {
   position: relative;
   margin-top: auto;
-  padding-top: 30px;
+  padding-top: 30px;  
   &:before {
     content: '';
     position: absolute;
@@ -42,7 +42,7 @@ footer#main-footer {
   .site-info {
     background: #363942;
     color: #777c8c;
-    padding: 65px 0 40px;
+    padding: 65px 4.166% 40px;
     > .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -97,7 +97,7 @@ footer#main-footer {
       display: -ms-flexbox;
       display: flex;
       .copy {
-        margin-right: 80px;
+        margin-right: 72px;
       }
       a {
         margin-left: 25px;

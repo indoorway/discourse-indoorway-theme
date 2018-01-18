@@ -50,6 +50,9 @@
             border-bottom-left-radius: 8px;
         }
     }
+    .topics:not(:first-of-type) {
+        padding-top: 12px;
+    }
 }
 
 table.category-list, table.topic-list  {
@@ -106,7 +109,7 @@ table.topic-list {
             margin-top: 8px
         }
         .last-user-info {
-          display: none;
+            display: none;
         }
         .featured-topic-desc {
             top: 5px;
@@ -114,7 +117,7 @@ table.topic-list {
         }
         .topic-statuses {
             position: relative;
-            top: 6px;
+            top: 4px;
         }
     }
     .fa-angle-right {
@@ -125,26 +128,32 @@ table.topic-list {
         font-weight: 700;
     }
     .subcategory {
+        display: inline-block;
         .badge-wrapper.bullet {
-            padding: 6px 15px;
+            padding: 0 15px;
+            height: 27px;
             text-align: center;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            
+            border-radius: 3px;
+
             .badge-category-bg {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border-radius: 3px;
-                z-index: 1;
+                display: none;
             }
+            
             .badge-category {
                 color: white !important;
                 z-index: 2;
                 position: relative;
             }
         }
+    }
+}
+
+.topic-list-item {
+    .badge-wrapper.bullet {
+        background-color: transparent !important;
     }
 }
 
@@ -194,4 +203,8 @@ table, table.category-list, table.category-list.with-topics {
 
 .category-notification-menu .dropdown-menu, .tags-admin-menu .dropdown-menu {
     top: 41px;
+}
+
+html.anon .topic-list a.title:visited:not(.badge-notification), .topic-list a.title.visited:not(.badge-notification) {
+    color: $primary;
 }
