@@ -29,7 +29,7 @@ function cleanDOM() {
 
 function addResizer () {
   let elToResize = $('#main-outlet');  
-  let height = elToResize.height() - 28; //  minus loader's height
+  let height = elToResize.height();
 
   scrollTop();
 
