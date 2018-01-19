@@ -208,3 +208,9 @@ table, table.category-list, table.category-list.with-topics {
 html.anon .topic-list a.title:visited:not(.badge-notification), .topic-list a.title.visited:not(.badge-notification) {
     color: $primary;
 }
+
+// Topic icon before avatar (like lock, when post is locked)
+.small-action .topic-avatar i {
+    font-size: inherit;
+    line-height: 34px;
+}
