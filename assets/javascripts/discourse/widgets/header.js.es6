@@ -52,7 +52,7 @@ createWidget('header-notifications', {
             h('h1.ring-first-notification', {} ,I18n.t('user.first_notification'))
           ));
         }
-      };
+      }
 
       contents.push(this.attach('link', { action: attrs.action,
                                           className: 'badge-notification unread-private-messages',
@@ -137,7 +137,7 @@ createWidget('header-icons', {
     }
 
     return icons;
-  },
+  }
 });
 
 createWidget('header-buttons', {
@@ -175,9 +175,10 @@ createWidget('header-links', {
       { name: 'Business', href: 'business' },
       { name: 'Developers', href: 'developers' },
       { name: 'Technology', href: 'technology' },
-      { name: 'Pricing', href: 'pricing' },
-    ]
-    for(const position of positions) {
+      { name: 'Pricing', href: 'pricing' }
+    ];
+    for(var i = 0; i < positions.length; i++) {
+      var position = positions[i];
       links.push(this.attach('link', {
         rawLabel: position.name,
         className: 'link',
@@ -209,7 +210,7 @@ createWidget('header-sub', {
         ringBackdrop: attrs.state.ringBackdrop,
         flagCount: attrs.attrs.flagCount 
       })
-    ]
+    ];
 
     return  h('div.wrap',  h('div.container', [home,  h('div.panel.clearfix', content)]));
   }

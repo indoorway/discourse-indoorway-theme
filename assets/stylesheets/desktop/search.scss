@@ -1,5 +1,5 @@
 header {
-  .search-menu {      
+  .search-menu {          
     &.results-loaded {
       .menu-panel {
         input {
@@ -26,7 +26,11 @@ header {
         background-color: white;
         border: 1px solid #22d56c;
         box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.12);
-        padding: 10px;
+        padding: 10px 10px 10px 14px;        
+        &:placeholder {
+          color: #a3a3a3;
+          font-size: 14px;
+        }
         &:active,
         &:focus {
           outline: none;

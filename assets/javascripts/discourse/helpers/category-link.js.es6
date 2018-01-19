@@ -1,8 +1,8 @@
 import { registerUnbound } from 'discourse-common/lib/helpers';
 import { iconHTML } from 'discourse-common/helpers/fa-icon';
 
-var get = Em.get,
-    escapeExpression = Handlebars.Utils.escapeExpression;
+var get = Em.get;
+var escapeExpression = Handlebars.Utils.escapeExpression;
 
 function categoryStripe(color, classes) {
   var style = color ? "style='background-color: #" + color + ";'" : "";
@@ -27,7 +27,9 @@ export function categoryBadgeHTML(category, opts) {
          Em.get(category, 'id') === Discourse.Site.currentProp("uncategorized_category_id") &&
          Discourse.SiteSettings.suppress_uncategorized_badge
         )
-     ) return "";
+     ) {
+      return "";
+     } 
 
   var description = get(category, 'description_text'),
       restricted = get(category, 'read_restricted'),
