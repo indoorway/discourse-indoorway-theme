@@ -1,7 +1,7 @@
-# name: indoorway-theme
+# name: discourse-indoorway-theme
 # about: Adds functionalities to indoorway theme
-# version: 0.1.2
-# authors: Daniel Sitarz
+# version: 1.0.0
+# authors: Daniel Sitarz (indoorway.com)
 # page: www.community.indoorway.com
 
 enabled_site_setting :indoorway_theme_enabled
