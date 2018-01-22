@@ -4,6 +4,12 @@
 # authors: Daniel Sitarz
 # page: www.community.indoorway.com
 
+enabled_site_setting :indoorway_theme_enabled
+
+register_asset 'stylesheets/colors.scss', :all
+register_asset 'stylesheets/icons.scss', :all
+register_asset 'stylesheets/footer.scss', :all
+
 register_asset 'stylesheets/mobile/header.scss', :mobile
 
 register_asset 'stylesheets/desktop/webfonts.scss', :desktop
@@ -23,6 +29,3 @@ register_asset 'stylesheets/desktop/search.scss', :desktop
 register_asset 'stylesheets/desktop/topic-timeline.scss', :desktop
 register_asset 'stylesheets/desktop/user.scss', :desktop
 register_asset 'stylesheets/desktop/admin-interface.scss', :desktop
-
-register_asset 'stylesheets/icons.scss', :all
-register_asset 'stylesheets/footer.scss', :all

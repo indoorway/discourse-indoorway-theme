@@ -5,3 +5,5 @@ en:
     developers: 'Developers'
     technology: 'Technology'
     pricing: 'Pricing'
+  site_settings:
+    indoorway_theme_enabled: 'Theme enabled?'
