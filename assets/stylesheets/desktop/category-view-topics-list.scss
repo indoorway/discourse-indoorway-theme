@@ -55,7 +55,7 @@
     }
 }
 
-table.category-list, table.topic-list  {
+table.category-list, table.topic-list, .search-container > .ember-view  {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 0;
     border-radius: 8px;
