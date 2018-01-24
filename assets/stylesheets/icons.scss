@@ -1,25 +1,52 @@
+@mixin filter($filter-type,$filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
 #sub-header {
-  [class^="fa fa-"] {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    font-size: initial;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
   .fa {  
     &.fa-indoor-menu {
       background-image: url(/plugins/indoorway-theme/images/indoor-i-menu.svg);
     }
     &.fa-indoor-home {
       background-image: url(/plugins/indoorway-theme/images/indoor-i-home.svg);      
+    }    
+  }
+}
+
+#sub-header [class^="fa fa-"], .fa.fa-search {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: initial;
+  background-position: center center;
+  background-repeat: no-repeat;     
+} 
+
+.fa {
+  &.fa-search {
+    background-image: url(/plugins/indoorway-theme/images/indoor-i-search.svg);    
+    &:before {
+      content: '';
     }
-    &.fa-search {
-      background-image: url(/plugins/indoorway-theme/images/indoor-i-search.svg);      
-      &:before {
-        content: '';
-      }
-    }
+  }
+}
+
+// Search icon in /search
+.search-container {
+  .full-page-search + button {
+    padding: 0px 10px;
+    position: relative;
+    top: 9px;
+    margin-left: 10px;
+  }
+  .fa.fa-search {
+    position: relative;
+    top: 2px;
+    @include filter(brightness, 100);
   }
 }

@@ -16,7 +16,7 @@ register_asset 'stylesheets/desktop/webfonts.scss', :desktop
 register_asset 'stylesheets/desktop/layout.scss', :desktop
 register_asset 'stylesheets/desktop/style.scss', :desktop
 register_asset 'stylesheets/desktop/buttons.scss', :desktop
-register_asset 'stylesheets/desktop/category-view-topics-list.scss', :desktop
+register_asset 'stylesheets/desktop/category-view-topics-list.scss', :all
 register_asset 'stylesheets/desktop/content.scss', :desktop
 register_asset 'stylesheets/desktop/index-layout.scss', :desktop
 register_asset 'stylesheets/desktop/list-controls.scss', :desktop
