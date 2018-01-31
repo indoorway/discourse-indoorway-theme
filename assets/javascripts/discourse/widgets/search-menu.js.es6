@@ -123,6 +123,7 @@ export default createWidget('search-menu', {
 
     if(parentElement) {
       parentElement.classList.remove(resultsLoadedClass);
+      document.getElementById('search-button').classList.remove(resultsLoadedClass)
     }
 
     if (searchData.term) {
@@ -131,6 +132,7 @@ export default createWidget('search-menu', {
       } else {           
         if(parentElement) {
           parentElement.classList.add(resultsLoadedClass);
+          document.getElementById('search-button').classList.add(resultsLoadedClass)
         }
         results.push(this.attach('search-menu-results', { term: searchData.term,
                                                           noResults: searchData.noResults,

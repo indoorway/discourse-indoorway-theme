@@ -297,7 +297,7 @@ export default createWidget('header', {
   closeAll() {
     this.state.userVisible = false;
     this.state.hamburgerVisible = false;
-    this.state.searchVisible = false;
+    this.state.searchVisible = false;    
   },
 
   linkClickedEvent(attrs) {
@@ -321,13 +321,14 @@ export default createWidget('header', {
     this.state.searchVisible = !this.state.searchVisible;
     this.updateHighlight();
 
+    const resultsLoadedClass = 'results-loaded';
+
     if (this.state.searchVisible) {
       Ember.run.schedule('afterRender', () => {
         const $searchInput = $('#search-term');
         $searchInput.focus().select();
 
-        const parentElement = document.querySelector('.search-menu');
-        const resultsLoadedClass = 'results-loaded';
+        const parentElement = document.querySelector('.search-menu');        
 
         if(parentElement) {
           if(document.querySelector('.search-menu .results')) {
@@ -339,6 +340,8 @@ export default createWidget('header', {
           appendSelector: '.menu-panel'
         });
       });
+    }else {
+      document.getElementById('search-button').classList.remove(resultsLoadedClass)
     }
   },
 
