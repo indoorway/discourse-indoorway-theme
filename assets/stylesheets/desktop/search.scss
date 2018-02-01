@@ -39,13 +39,19 @@ header {
           color: #c4c8d1;
           opacity: 0;
           cursor: pointer;
-          animation: search-fadeIn .3s .3s forwards; 
+          animation: search-fadeIn .3s forwards .3s; 
         }
       }
     }
   }
 
   #search-button.results-loaded {
+    // 25px at start.
+    // Cuz of 0 bottom radius the look of border changes.
+    // By trial and error approach, 21px looks fine. 
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -105,7 +111,7 @@ header {
   .panel.logged {
     .search-menu {
       .menu-panel {
-        right: 140px;
+        right: 100px;
       }
     }
   }
@@ -127,7 +133,7 @@ header .search-menu .menu-panel, .search.row {
     background-color: transparent;
     padding: 0 10px 0 14px;      
     opacity: 0;
-    animation: search-fadeIn .3s .2s forwards; 
+    animation: search-fadeIn .3s forwards .2s; 
     &:placeholder {
       color: #a3a3a3;
       font-size: 14px;

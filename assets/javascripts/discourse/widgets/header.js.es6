@@ -321,7 +321,8 @@ export default createWidget('header', {
     this.state.searchVisible = !this.state.searchVisible;
     this.updateHighlight();
 
-    const resultsLoadedClass = 'results-loaded';
+    const resultsLoadedClass = 'results-loaded';    
+    const searchButton = document.getElementById('search-button');
 
     if (this.state.searchVisible) {
       Ember.run.schedule('afterRender', () => {
@@ -333,6 +334,7 @@ export default createWidget('header', {
         if(parentElement) {
           if(document.querySelector('.search-menu .results')) {
             parentElement.classList.add(resultsLoadedClass);
+            searchButton.classList.add(resultsLoadedClass);
           }    
         }
 
@@ -341,13 +343,13 @@ export default createWidget('header', {
         });
       });
     }else {
-      document.getElementById('search-button').classList.remove(resultsLoadedClass)
+      searchButton.classList.remove(resultsLoadedClass)
     }
   },
 
   toggleUserMenu() {
     this.state.ringBackdrop = false;
-    this.state.userVisible = !this.state.userVisible;
+    this.state.userVisible = !this.state.userVisible;    
   },
 
   toggleHamburger() {
