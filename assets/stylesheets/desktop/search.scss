@@ -40,10 +40,6 @@ header {
           opacity: 0;
           cursor: pointer;
           animation: search-fadeIn .3s .3s forwards; 
-          transition: opacity 0.3s ease;
-          &:hover {
-            color: #343639;
-          }
         }
       }
     }
@@ -53,14 +49,18 @@ header {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-
+  [data-click-outside].search-menu {
+    right: 0;
+  }
   .search-menu {    
+    width: 420px;
     .menu-panel {
       box-sizing: border-box;
       top: -60px !important;
       height: 60px !important;
-      right: 75px;
+      right: 40px;
       padding: 14px 0;
+      width: 380px !important;
       background-color: transparent;
       border: none;
       box-shadow: none;
@@ -70,31 +70,35 @@ header {
         height: 100% !important;
         .panel-body-contents {
           height: 100% !important;
+          padding: 0 30px;          
         }
       }
       .search-context {
         display: none;
       }
       .results {
+        position: absolute;
         background-color: white;
         border-bottom-left-radius: 18px;
         border-bottom-right-radius: 18px;
         padding: 5px 15px 15px 0;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        top: 4px;
-        width: 403px;
+        top: 51px;
+        left: 0;
+        width: 420px;
+        box-sizing: border-box;
         border-top: 1px solid rgba(0,0,0,0.1);
         border-bottom: 1px solid #22d56c;
         border-left: 1px solid #22d56c;
         border-right: 1px solid #22d56c;
-        left: -37px;
-        position: relative;
+        animation: none;
         .no-results {
           padding: 10px 0 0 0;
         }
       }
       .searching {
-        top: 5px;
+        top: 4px;
+        right: 0;
       }
     }
   }
@@ -117,13 +121,11 @@ header .search-menu .menu-panel, .search.row {
     height: 32px;
     line-height: 32px;  
     outline: none;
-    box-shadow: none;
     border-radius: 18px;
-    background-color: white;
     border: none;
     box-shadow: none;
     background-color: transparent;
-    padding: 11px 10px 10px 14px;      
+    padding: 0 10px 0 14px;      
     opacity: 0;
     animation: search-fadeIn .3s .2s forwards; 
     &:placeholder {
