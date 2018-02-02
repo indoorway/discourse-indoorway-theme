@@ -9,10 +9,10 @@
 #sub-header {
   .fa {  
     &.fa-indoor-menu {
-      background-image: url(/plugins/indoorway-theme/images/indoor-i-menu.svg);
+      background-image: url(/plugins/discourse-indoorway-theme/images/indoor-i-menu.svg);
     }
     &.fa-indoor-home {
-      background-image: url(/plugins/indoorway-theme/images/indoor-i-home.svg);      
+      background-image: url(/plugins/discourse-indoorway-theme/images/indoor-i-home.svg);      
     }    
   }
 }
@@ -29,7 +29,7 @@
 
 .fa {
   &.fa-search {
-    background-image: url(/plugins/indoorway-theme/images/indoor-i-search.svg);    
+    background-image: url(/plugins/discourse-indoorway-theme/images/indoor-i-search.svg);    
     &:before {
       content: '';
     }
