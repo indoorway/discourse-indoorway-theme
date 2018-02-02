@@ -78,8 +78,8 @@ ul.nav-pills > li > a,
 }
 
 ul.nav-pills > li > a {
-  padding: 10px 0;
-  min-width: 133px;
+  padding: 10px 20px;
+  min-width: 93px;
   text-align: center;
 }
 
@@ -135,8 +135,9 @@ i {
     content: ''; // lol
   }
   &.fa-caret-down:before,
-  &.caret:before {
-    content: '\f107'; // lol
+  &.caret:before,
+  &.fa-chevron-down:before {
+    content: '\f107' !important; // lol
   }
 }
 
@@ -214,6 +215,7 @@ i {
         padding: 10px 20px;
         font-weight: 400;
         font-size: 14px;
+        background-color: transparent !important;
       }
     }
   }

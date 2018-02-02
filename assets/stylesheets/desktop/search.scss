@@ -87,7 +87,7 @@ header {
         background-color: white;
         border-bottom-left-radius: 18px;
         border-bottom-right-radius: 18px;
-        padding: 5px 15px 15px 0;
+        padding: 10px 15px 15px 0;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         top: 51px;
         left: 0;
@@ -103,6 +103,22 @@ header {
         }
         .spinner, .no-results {
           animation: none;
+        }
+        .search-link {
+          padding-top: 13px;
+          .topic-title {
+            font-size: 15px;
+            font-weight: 400;
+          }
+          .blurb {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+        }        
+        .fa-chevron-down:before{
+          position: relative;
+          top: 2px;
         }
       }
       .searching {
