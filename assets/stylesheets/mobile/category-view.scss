@@ -4,6 +4,7 @@
         background-color: transparent !important;
     }
   }
+  
   .category-list-item {
     margin-bottom: 25px;
     border-radius: 8px;
@@ -11,7 +12,12 @@
       display: none;
     }
   }
+
   .categories-list .category-list {
     margin-left: 0;
+  }
+
+  table.topic-list tr:last-of-type td {
+    padding-bottom: 20px;
   }
 }

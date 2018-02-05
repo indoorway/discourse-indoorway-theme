@@ -1,7 +1,10 @@
 .d-header {
   box-shadow: none;
   padding-top: 20px;
-  padding-bottom: 20px;
+  height: 140px;
+  > .wrap {
+    margin-bottom: 20px;
+  }
 }
 
 #main-outlet {
@@ -16,11 +19,9 @@
 }
 
 #sub-header {
-  position: fixed;
   width: 100%;
   height: 60px;
   left: 0;
-  top: 100px;
   background-color: #373a43;
   padding: 0;
   z-index: 500;
@@ -94,7 +95,7 @@ header ul[role='navigation'] {
 
 header [data-click-outside] {
   position: relative;
-  top: 140px;
+  top: 142px;
   right: 9px;
   &.hamburger-panel {
     .menu-panel {

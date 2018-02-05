@@ -243,8 +243,7 @@ export default createWidget('header', {
 
   html(attrs, state) {
     const panels = [
-                    this.attach('header-links'),                    
-                    this.attach('header-sub', {attrs: attrs, state: state})
+                    this.attach('header-links')                    
                     ];
 
     if (state.searchVisible) {
@@ -283,7 +282,12 @@ export default createWidget('header', {
       contents.push(this.attach('header-topic-info', attrs));
     }
 
-    return h('div.wrap', h('div.contents.clearfix', contents));
+    const header = [
+        h('div.wrap', h('div.contents.clearfix', contents)),
+        this.attach('header-sub', {attrs: attrs, state: state})
+      ]
+
+    return header;
   },
 
   updateHighlight() {

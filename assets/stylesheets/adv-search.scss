@@ -1,0 +1,38 @@
+.search-container {
+  .search.row {
+    input.full-page-search {
+      margin-bottom: 10px;
+      border: 1px solid #22d56c !important;
+      background-color: white;
+      border-radius: 25px;
+      border-radius: 25px;
+      height: 43px;
+      box-sizing: border-box;
+    }      
+  }
+  
+  .fa-lock:before {
+    font-size: 14px;
+  }
+  
+  .search-category .badge-wrapper.bullet {
+    background-color: transparent !important;
+  }
+  
+  .search-advanced-options {
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+  }
+
+  .search-title {
+    border-bottom: none;
+  }    
+  > .ember-view {
+    padding: 20px 25px 40px 25px;
+  }
+  .search-footer {
+    margin-top: 20px;
+  }  
+}

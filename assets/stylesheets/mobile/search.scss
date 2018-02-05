@@ -1,0 +1,9 @@
+.mobile-view {
+  .search.row input.search {
+    width: 77%;
+    + button {
+      width: 16%;
+      border-radius: 4px;
+    }
+  }
+}
