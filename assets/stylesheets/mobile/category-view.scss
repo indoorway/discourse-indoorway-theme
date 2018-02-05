@@ -1,0 +1,17 @@
+.mobile-view {
+  .subcategories {
+    .badge-wrapper.bullet {
+        background-color: transparent !important;
+    }
+  }
+  .category-list-item {
+    margin-bottom: 25px;
+    border-radius: 8px;
+    > footer {
+      display: none;
+    }
+  }
+  .categories-list .category-list {
+    margin-left: 0;
+  }
+}

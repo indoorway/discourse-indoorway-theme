@@ -152,9 +152,8 @@ createWidget('header-buttons', {
       buttons.push(this.attach('link', { label: "sign_up",
                                            className: 'btn-primary btn-small sign-up-button',
                                            action: "showCreateAccount" }));
-    }
-
-    buttons.push(h('div.divider'));
+      buttons.push(h('div.divider'));
+    }    
 
     buttons.push(this.attach('link', { label: 'log_in',
                                          className: 'btn-primary btn-small login-button',

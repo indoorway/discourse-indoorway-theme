@@ -1,14 +1,16 @@
-#site-logo {
-  width: 113px;
-}
-#indoorway-nav {
-  display: none;
-}
-.d-header {
-  .back-home {
+.mobile-view {
+  #site-logo {
+    width: 113px;
+  }
+  #indoorway-nav {
     display: none;
   }
-}
-#main-outlet {
-  padding-top: 70px;
+  .d-header {
+    .back-home {
+      display: none;
+    }
+  }
+  #main-outlet {
+    padding-top: 180px;
+  }
 }
