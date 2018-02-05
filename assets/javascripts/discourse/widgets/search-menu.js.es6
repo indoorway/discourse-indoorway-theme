@@ -12,6 +12,8 @@ const searchData = {
   invalidTerm: false
 };
 
+const resultsLoadedClass = 'results-loaded';
+
 // Helps with debouncing and cancelling promises
 const SearchHelper = {
   _activeSearch: null,
@@ -118,8 +120,7 @@ export default createWidget('search-menu', {
       })
     ];
 
-    const parentElement = document.querySelector('.search-menu');
-    const resultsLoadedClass = 'results-loaded';
+    const parentElement = document.querySelector('.search-menu');    
 
     if(parentElement) {
       parentElement.classList.remove(resultsLoadedClass);
@@ -202,6 +203,11 @@ export default createWidget('search-menu', {
 
   fullSearch() {
     if (!isValidSearchTerm(searchData.term)) { return; }
+
+    const btn = document.getElementById('search-button');
+    if (btn) {
+      btn.classList.remove(resultsLoadedClass)
+    }    
 
     searchData.results = [];
     searchData.loading = false;
